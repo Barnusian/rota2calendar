@@ -11,10 +11,16 @@
     </title>
     <style>
       body {
-        margin: 50px;
+        margin: 50px 50px 0px 50px;
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
         background-color: rgb(233, 233, 233);
+      }
+      #page-container {
+        min-height: calc(100vh - 90px);
+      }
+      #footer {
+        height: 30px;
       }
       a {
         color: rgb(198, 116, 168);
@@ -85,6 +91,7 @@
     </style>
 </head>  
 <body>
+ <div id="page-container">
     <header>
       <a href="{{ url_for('index') }}"><h1>Rota2Calendar</h1></a>
       <nav>
@@ -97,5 +104,7 @@
     {% block content %}
         <p>No content to show, sorry!</p>
     {% endblock content %}
+ </div>
+ <footer id="footer">2025 Barnie Mumby-Price <a href="https://github.com/Barnusian/rota2calendar">Github project page</a></footer>
 </body>
 </html>
