@@ -22,7 +22,7 @@ def how():
 def test():
         return render_template('testpage.html')
 
-@app.route('/file_upload', methods=['POST'])
+@app.route('/file_upload', methods=['POST', 'GET'])
 def file_upload():
     if 'file' not in request.files:
         return "No file part"
