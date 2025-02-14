@@ -3,8 +3,17 @@
     How does this work?
 {% endblock title %}
 {% block content %}
-    <svg width="500" height="280">
-        <rect x="0" y="0" width="500" height="280" fill="none" stroke="black" stroke-width="2"/>
-        <text x="250" y="140" font-family="Arial" text-anchor="middle">Placeholder for video of me explaining this.</text>
-    </svg>
+    <div class="container">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jYP_eQfvL-I?si=8hrfxvPdFxm9Y-QD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+    <br><br>
+    <div class="description">
+    <p>By total accident this is even easier on mobile. Just add your name and the rota PDF and hit generate. You should get a download of a .ics file which when opened shows you the events you are about to add to your calendar. These events will have your start and finish time as the title. Cells containing "0:00-0:00" will be ignored. REMEMBER TO CHECK THESE AGAINST THE ROTA FOR ACCURACRY! A few times in the past I've found some of my shifts move by one day and need to be manually changed. Just make sure they're correct.
+    <br><br><br>
+    The code behind this figures out the dates of your shifts from the date listed in the top left. This needs to be in dd/mm/yy format or this won't work. If the date is wrong or is written as dd.mm.yy, you'll have to edit the PDF and kindly request your manager keeps the date the same next time.
+    <br><br><br>
+    When you enter your name as it is displayed on the rota, the row containing your shifts is found based on the cell that contains your name. Your name is not case sensitive and partial matches work. Be careful, if your mame appears elsewhere this may act funky. For instance, instead of writing "Barnie" I could put "bar". However it's likely that word exists in the top half of the document in an event description, given that we are a bar. Also, if two people have the same name you're going to have a bad time. I don't have a solution for this, just try your best.</P>
+    </div>
 {% endblock content %}
