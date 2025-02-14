@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    Index Page
+{% endblock title %}
+{% block content %}
+    <p>Please enter your name and add the rota file you wish to transform.</p>
+    
+    <form method="POST" action="{{ url_for('file_upload') }}" enctype="multipart/form-data">
+    <input type="text" name="username" placeholder="Name" required="required">
+    <label class="custom-file-upload">
+        <input type="file" name="file" accept="application/pdf" required="required">
+        Select Rota
+    </label>
+    <br><br>
+    <input type="submit" value="Upload & Generate Calendar">
+    </form>
+{% endblock content %}

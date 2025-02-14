@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+    {% block title %}
+        Default Value
+    {% endblock title %}
+    </title>
+    <style>
+      body {
+        margin: 50px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(233, 233, 233);
+      }
+      ul {
+        padding: 0px;
+      }
+      li {
+        display: inline;
+        padding: 0px 10px 0px 10px;
+      }
+      nav {
+        padding: 0px 0px 50px 0px;
+      }
+      p {
+        margin-top: 0px;
+      }
+      input {
+        padding: 10px;
+        border-radius: 5px;
+      }
+      input[type="file"] {
+        display: none;
+      }
+      .custom-file-upload {
+        background-color: rgb(214, 145, 189);
+        display: inline-block;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        font-size: medium;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+      }
+      .custom-file-upload:hover {
+        background-color: rgb(198, 116, 168);
+      }
+      input[type="submit"] {
+        background-color: rgb(214, 145, 189);
+        display: block;
+        margin: 0px auto;
+        border: none;
+        color: white;
+        font-size: large;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: rgb(198, 116, 168);
+      }
+    </style>
+</head>  
+<body>
+    <header>
+      <a href="{{ url_for('index') }}"><h1>Rota2Calendar</h1></a>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('what') }}">What is this?</a></li>
+          <li><a href="{{ url_for('how') }}">How do I use it?</a></li>
+        </ul>
+      </nav>
+    </header>
+    {% block content %}
+        <p>No content to show, sorry!</p>
+    {% endblock content %}
+</body>
+</html>
